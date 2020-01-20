@@ -2,10 +2,19 @@ package com.olive.rest.webservices.restfulwebservices.user;
 
 import java.util.Date;
 
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
+
+import com.sun.istack.NotNull;
+
 public class User {
 	
 	private Integer id;
+	
+	@NotNull
+	@Size(min=2, message="Name should have at least 2 characters")
 	private String name;
+	@Past
 	private Date birthDate;
 	
 	protected User() {
