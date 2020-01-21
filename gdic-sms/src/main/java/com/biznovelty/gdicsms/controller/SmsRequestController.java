@@ -2,6 +2,7 @@ package com.biznovelty.gdicsms.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.biznovelty.gdicsms.apiclient.SmsReq;
@@ -14,19 +15,17 @@ public class SmsRequestController {
 	private SmsController smsController;
 	
 	@PostMapping("/sms")
-	public void getRequest() {
+	public void getRequest(@RequestBody SmsReq smsReq) {
 		
-		SmsReq smsReq = new SmsReq();
-//		smsReq.getReceipient();
-//		smsReq.getMessagedata();
+		smsController.getClass();
 		
 		SmsResponse smsResponse = new SmsResponse();
 		
 		if(smsReq != null) {
 			smsResponse.setReceipient(smsReq.getReceipient());
-			smsResponse.setMessagedata(smsReq.getMessagedata());
+			smsResponse.setMessage(smsReq.getMessage());
 		}
-		System.out.println(smsResponse);
+		
 	}
 
 }

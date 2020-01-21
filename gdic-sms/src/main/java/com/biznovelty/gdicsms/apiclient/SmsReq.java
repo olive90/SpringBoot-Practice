@@ -1,7 +1,5 @@
 package com.biznovelty.gdicsms.apiclient;
 
-import java.net.URLEncoder;
-
 public class SmsReq {
 		
 		private String username;
@@ -9,8 +7,8 @@ public class SmsReq {
 		private String action;
 		private String timestamp;
 		private String url;
-		private String receipient = "01798786889";
-		private String messagedata = "Hi buddy";
+		private String receipient;
+		private String message;
 		private String status;
 		
 		public SmsReq() {
@@ -65,12 +63,12 @@ public class SmsReq {
 			this.receipient = receipient;
 		}
 
-		public String getMessagedata() {
-			return URLEncoder.encode(messagedata);
+		public String getMessage() {
+			return message;
 		}
 
-		public void setMessagedata(String messagedata) {
-			this.messagedata = messagedata;
+		public void setMessage(String message) {
+			this.message = message;
 		}
 		
 		/**
@@ -90,7 +88,7 @@ public class SmsReq {
 		@Override
 		public String toString() {
 			return "SmsReq [username=" + username + ", password=" + password + ", action=" + action + ", timestamp="
-					+ timestamp + ", url=" + url + ", receipient=" + receipient + ", messagedata=" + messagedata + ", status=" + status + "]";
+					+ timestamp + ", url=" + url + ", receipient=" + receipient + ", message=" + message + ", status=" + status + "]";
 		}
 		
 }

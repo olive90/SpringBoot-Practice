@@ -1,7 +1,5 @@
 package com.biznovelty.gdicsms.apiclient;
 
-import java.net.URLEncoder;
-
 public class SmsResponse {
 	
 	private String username;
@@ -9,8 +7,8 @@ public class SmsResponse {
 	private String action;
 	private String timestamp;
 	private String url;
-	private String receipient = "01798786889";
-	private String messagedata = "Hi Buddy";
+	private String receipient;
+	private String message;
 	private String status;
 	
 	public SmsResponse() {
@@ -18,7 +16,7 @@ public class SmsResponse {
 	}
 
 	public SmsResponse(String username, String password, String action, String timestamp, String url, String receipient,
-			String messagedata, String status) {
+			String message, String status) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -26,7 +24,7 @@ public class SmsResponse {
 		this.timestamp = timestamp;
 		this.url = url;
 		this.receipient = receipient;
-		this.messagedata = messagedata;
+		this.message = message;
 		this.status = status;
 	}
 
@@ -78,12 +76,12 @@ public class SmsResponse {
 		this.receipient = receipient;
 	}
 
-	public String getMessagedata() {
-		return URLEncoder.encode(messagedata);
+	public String getMessage() {
+		return message;
 	}
 
-	public void setMessagedata(String messagedata) {
-		this.messagedata = messagedata;
+	public void setMessage(String message) {
+		this.message = message;
 	}
 	
 	/**
@@ -103,7 +101,7 @@ public class SmsResponse {
 	@Override
 	public String toString() {
 		return "SmsResponse [username=" + username + ", password=" + password + ", action=" + action + ", timestamp="
-				+ timestamp + ", url=" + url + ", receipient=" + receipient + ", messagedata=" + messagedata + ", status=" + status + "]";
+				+ timestamp + ", url=" + url + ", receipient=" + receipient + ", message=" + message + ", status=" + status + "]";
 	}
 	
 }
