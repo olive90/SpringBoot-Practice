@@ -28,14 +28,14 @@ public class SmsResource {
 
 	@Autowired
 	private AuthenticationManager authenticationManager;
-
+	
 	@Autowired
 	private MyUserDetailsService userDetailService;
-
+	
 	@Autowired
 	private JwtUtil jwtTokenUtil;
-
-	public static final Logger log = LoggerFactory.getLogger(SmsResource.class);
+	
+	private static final Logger log = LoggerFactory.getLogger(SmsResource.class);
 
 	@PostMapping("/sms")
 	public SmsResponse getRequest(@Validated @RequestBody SmsReq smsReq) throws Exception {
@@ -51,21 +51,22 @@ public class SmsResource {
 	}
 
 	@RequestMapping(value = "/authenticate", method = RequestMethod.POST)
-	public ResponseEntity<?> creatAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest)
-			throws Exception {
+	public ResponseEntity<?> creatAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest) throws Exception{
 		try {
-			authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
-					authenticationRequest.getUsername(), authenticationRequest.getPassword()));
-		} catch (BadCredentialsException e) {
+			authenticationManager.authenticate(
+					new UsernamePasswordAuthenticationToken(
+							authenticationRequest.getUsername(), authenticationRequest.getPassword())
+					);
+		} catch(BadCredentialsException e ) {
 			throw new Exception("Incorect username or password", e);
 		}
-
+		
 		final UserDetails userDetails = userDetailService.loadUserByUsername(authenticationRequest.getUsername());
-
-		final String jwt = jwtTokenUtil.genearteToken(userDetails);
-
+		
+		final String jwt =jwtTokenUtil.genearteToken(userDetails);
+		
 		log.info(jwt);
-
+		
 		return ResponseEntity.ok(new AuthenticationResponse(jwt));
 	}
 
