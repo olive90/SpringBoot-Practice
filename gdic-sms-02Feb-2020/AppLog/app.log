@@ -1,0 +1,1137 @@
+2020-01-30 09:28:04 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9180 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 09:28:05 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 09:28:05 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-01-30 09:28:05 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-01-30 09:28:07 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 09:28:07 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 09:28:07 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 09:28:07 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 09:28:07 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2300 ms
+2020-01-30 09:28:07 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@690851ef, org.springframework.security.web.context.SecurityContextPersistenceFilter@f251312, org.springframework.security.web.header.HeaderWriterFilter@6957860e, org.springframework.security.web.authentication.logout.LogoutFilter@7ba49f9, com.biznovelty.gdicsms.filter.JwtRequestFilter@63e54fce, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a19d343, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d0bd7aa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7e6314ef, org.springframework.security.web.session.SessionManagementFilter@16821d3a, org.springframework.security.web.access.ExceptionTranslationFilter@1e9f7000, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@35c8f5d2]
+2020-01-30 09:28:07 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 09:28:07 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 09:28:07 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 3.914 seconds (JVM running for 6.113)
+2020-01-30 09:28:24 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 09:28:24 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 09:28:24 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 46 ms
+2020-01-30 09:28:25 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2020-01-29T12:12:33Z. Current time: 2020-01-30T03:28:25Z, a difference of 54952366 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:411)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:513)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:573)
+	at com.biznovelty.gdicsms.util.JwtUtil.extractAllClaims(JwtUtil.java:38)
+	at com.biznovelty.gdicsms.util.JwtUtil.extractClaim(JwtUtil.java:33)
+	at com.biznovelty.gdicsms.util.JwtUtil.extractUserName(JwtUtil.java:25)
+	at com.biznovelty.gdicsms.filter.JwtRequestFilter.doFilterInternal(JwtRequestFilter.java:40)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2020-01-30 09:30:07 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9180 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 09:30:07 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 09:30:08 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 09:30:08 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 09:30:08 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 09:30:08 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 09:30:08 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 569 ms
+2020-01-30 09:30:08 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityConfigurer' defined in file [E:\project\gdic-sms\bin\main\com\biznovelty\gdicsms\SecurityConfigurer.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.biznovelty.gdicsms.SecurityConfigurer$$EnhancerBySpringCGLIB$$c6e2b520]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.filter.JwtRequestFilter cannot be resolved
+	JwtRequestFilter cannot be resolved to a type
+	JwtRequestFilter cannot be resolved to a type
+
+2020-01-30 09:30:08 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-01-30 09:30:08 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-01-30 09:30:08 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityConfigurer' defined in file [E:\project\gdic-sms\bin\main\com\biznovelty\gdicsms\SecurityConfigurer.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.biznovelty.gdicsms.SecurityConfigurer$$EnhancerBySpringCGLIB$$c6e2b520]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.filter.JwtRequestFilter cannot be resolved
+	JwtRequestFilter cannot be resolved to a type
+	JwtRequestFilter cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1320) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at com.biznovelty.gdicsms.GdicSmsApplication.main(GdicSmsApplication.java:10) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.biznovelty.gdicsms.SecurityConfigurer$$EnhancerBySpringCGLIB$$c6e2b520]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.filter.JwtRequestFilter cannot be resolved
+	JwtRequestFilter cannot be resolved to a type
+	JwtRequestFilter cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:216) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1312) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 23 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.filter.JwtRequestFilter cannot be resolved
+	JwtRequestFilter cannot be resolved to a type
+	JwtRequestFilter cannot be resolved to a type
+
+	at com.biznovelty.gdicsms.SecurityConfigurer.<init>(SecurityConfigurer.java:14) ~[main/:na]
+	at com.biznovelty.gdicsms.SecurityConfigurer$$EnhancerBySpringCGLIB$$c6e2b520.<init>(<generated>) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:203) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 25 common frames omitted
+2020-01-30 09:30:47 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9180 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 09:30:47 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 09:30:47 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 09:30:47 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 09:30:47 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 09:30:47 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 09:30:47 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 194 ms
+2020-01-30 09:30:47 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b3d21bc, org.springframework.security.web.context.SecurityContextPersistenceFilter@767e40d2, org.springframework.security.web.header.HeaderWriterFilter@64840427, org.springframework.security.web.authentication.logout.LogoutFilter@1444bc82, com.biznovelty.gdicsms.filter.JwtRequestFilter@1d193b71, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e55a7c1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ab43710, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@180da153, org.springframework.security.web.session.SessionManagementFilter@32651e77, org.springframework.security.web.access.ExceptionTranslationFilter@2e42ca26, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@29ada9bc]
+2020-01-30 09:30:47 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 09:30:47 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 09:30:47 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.381 seconds (JVM running for 166.138)
+2020-01-30 09:30:47 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 09:30:51 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 09:30:51 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 09:30:51 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2020-01-30 09:31:13 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9180 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 09:31:13 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 09:31:13 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 09:31:13 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 09:31:13 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 09:31:13 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 09:31:13 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 161 ms
+2020-01-30 09:31:13 [restartedMain] ERROR o.s.b.w.e.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtRequestFilter': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'myUserDetailsService': Unsatisfied dependency expressed through field 'encoder'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-01-30 09:31:13 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-01-30 09:31:13 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2020-01-30 09:31:13 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-01-30 09:31:14 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field encoder in com.biznovelty.gdicsms.service.MyUserDetailsService required a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' in your configuration.
+
+2020-01-30 09:31:16 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9180 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 09:31:16 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 09:31:16 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 09:31:16 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 09:31:16 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 09:31:16 [restartedMain] INFO  o.a.c.c.C.[Tomcat-2].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 09:31:16 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 251 ms
+2020-01-30 09:31:17 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'smsController': Unsatisfied dependency expressed through field 'restTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restTemplate' defined in class path resource [com/biznovelty/gdicsms/controller/SmsController.class]: Unsatisfied dependency expressed through method 'restTemplate' parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'smsResource': Unsatisfied dependency expressed through field 'authenticationManager'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.authentication.AuthenticationManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-01-30 09:31:17 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-01-30 09:31:17 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-01-30 09:31:17 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field authenticationManager in com.biznovelty.gdicsms.smsresource.SmsResource required a bean of type 'org.springframework.security.authentication.AuthenticationManager' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.authentication.AuthenticationManager' in your configuration.
+
+2020-01-30 09:31:21 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9180 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 09:31:21 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 09:31:21 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 09:31:21 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 09:31:21 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 09:31:21 [restartedMain] INFO  o.a.c.c.C.[Tomcat-3].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 09:31:21 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 248 ms
+2020-01-30 09:31:21 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'smsController': Unsatisfied dependency expressed through field 'restTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restTemplate' defined in class path resource [com/biznovelty/gdicsms/controller/SmsController.class]: Unsatisfied dependency expressed through method 'restTemplate' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'smsResource' defined in file [E:\project\gdic-sms\bin\main\com\biznovelty\gdicsms\smsresource\SmsResource.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.biznovelty.gdicsms.smsresource.SmsResource]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.service.MyUserDetailsService cannot be resolved
+	MyUserDetailsService cannot be resolved to a type
+
+2020-01-30 09:31:21 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-01-30 09:31:21 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-01-30 09:31:21 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'smsController': Unsatisfied dependency expressed through field 'restTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restTemplate' defined in class path resource [com/biznovelty/gdicsms/controller/SmsController.class]: Unsatisfied dependency expressed through method 'restTemplate' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'smsResource' defined in file [E:\project\gdic-sms\bin\main\com\biznovelty\gdicsms\smsresource\SmsResource.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.biznovelty.gdicsms.smsresource.SmsResource]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.service.MyUserDetailsService cannot be resolved
+	MyUserDetailsService cannot be resolved to a type
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at com.biznovelty.gdicsms.GdicSmsApplication.main(GdicSmsApplication.java:10) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restTemplate' defined in class path resource [com/biznovelty/gdicsms/controller/SmsController.class]: Unsatisfied dependency expressed through method 'restTemplate' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'smsResource' defined in file [E:\project\gdic-sms\bin\main\com\biznovelty\gdicsms\smsresource\SmsResource.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.biznovelty.gdicsms.smsresource.SmsResource]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.service.MyUserDetailsService cannot be resolved
+	MyUserDetailsService cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'smsResource' defined in file [E:\project\gdic-sms\bin\main\com\biznovelty\gdicsms\smsresource\SmsResource.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.biznovelty.gdicsms.smsresource.SmsResource]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.service.MyUserDetailsService cannot be resolved
+	MyUserDetailsService cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1320) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 38 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.biznovelty.gdicsms.smsresource.SmsResource]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.service.MyUserDetailsService cannot be resolved
+	MyUserDetailsService cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:216) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1312) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 50 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.service.MyUserDetailsService cannot be resolved
+	MyUserDetailsService cannot be resolved to a type
+
+	at com.biznovelty.gdicsms.smsresource.SmsResource.<init>(SmsResource.java:23) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:203) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 52 common frames omitted
+2020-01-30 09:31:32 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9180 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 09:31:32 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 09:31:32 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 09:31:32 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 09:31:32 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 09:31:32 [restartedMain] INFO  o.a.c.c.C.[Tomcat-4].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 09:31:32 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 222 ms
+2020-01-30 09:31:32 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'smsController': Unsatisfied dependency expressed through field 'restTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restTemplate' defined in class path resource [com/biznovelty/gdicsms/controller/SmsController.class]: Unsatisfied dependency expressed through method 'restTemplate' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'smsResource' defined in file [E:\project\gdic-sms\bin\main\com\biznovelty\gdicsms\smsresource\SmsResource.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.biznovelty.gdicsms.smsresource.SmsResource]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.service.MyUserDetailsService cannot be resolved
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+
+2020-01-30 09:31:32 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-01-30 09:31:32 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-01-30 09:31:32 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'smsController': Unsatisfied dependency expressed through field 'restTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restTemplate' defined in class path resource [com/biznovelty/gdicsms/controller/SmsController.class]: Unsatisfied dependency expressed through method 'restTemplate' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'smsResource' defined in file [E:\project\gdic-sms\bin\main\com\biznovelty\gdicsms\smsresource\SmsResource.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.biznovelty.gdicsms.smsresource.SmsResource]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.service.MyUserDetailsService cannot be resolved
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at com.biznovelty.gdicsms.GdicSmsApplication.main(GdicSmsApplication.java:10) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restTemplate' defined in class path resource [com/biznovelty/gdicsms/controller/SmsController.class]: Unsatisfied dependency expressed through method 'restTemplate' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'smsResource' defined in file [E:\project\gdic-sms\bin\main\com\biznovelty\gdicsms\smsresource\SmsResource.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.biznovelty.gdicsms.smsresource.SmsResource]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.service.MyUserDetailsService cannot be resolved
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'smsResource' defined in file [E:\project\gdic-sms\bin\main\com\biznovelty\gdicsms\smsresource\SmsResource.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.biznovelty.gdicsms.smsresource.SmsResource]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.service.MyUserDetailsService cannot be resolved
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1320) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 38 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.biznovelty.gdicsms.smsresource.SmsResource]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.service.MyUserDetailsService cannot be resolved
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:216) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1312) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 50 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.service.MyUserDetailsService cannot be resolved
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+
+	at com.biznovelty.gdicsms.smsresource.SmsResource.<init>(SmsResource.java:23) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:203) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 52 common frames omitted
+2020-01-30 09:31:37 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9180 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 09:31:37 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 09:31:37 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 09:31:37 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 09:31:37 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 09:31:37 [restartedMain] INFO  o.a.c.c.C.[Tomcat-5].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 09:31:37 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 177 ms
+2020-01-30 09:31:37 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'smsController': Unsatisfied dependency expressed through field 'restTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restTemplate' defined in class path resource [com/biznovelty/gdicsms/controller/SmsController.class]: Unsatisfied dependency expressed through method 'restTemplate' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'smsResource' defined in file [E:\project\gdic-sms\bin\main\com\biznovelty\gdicsms\smsresource\SmsResource.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.biznovelty.gdicsms.smsresource.SmsResource]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.service.MyUserDetailsService cannot be resolved
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+
+2020-01-30 09:31:37 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-01-30 09:31:37 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-01-30 09:31:37 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'smsController': Unsatisfied dependency expressed through field 'restTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restTemplate' defined in class path resource [com/biznovelty/gdicsms/controller/SmsController.class]: Unsatisfied dependency expressed through method 'restTemplate' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'smsResource' defined in file [E:\project\gdic-sms\bin\main\com\biznovelty\gdicsms\smsresource\SmsResource.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.biznovelty.gdicsms.smsresource.SmsResource]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.service.MyUserDetailsService cannot be resolved
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+	at com.biznovelty.gdicsms.GdicSmsApplication.main(GdicSmsApplication.java:10) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.3.0.BUILD-SNAPSHOT.jar:2.3.0.BUILD-SNAPSHOT]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'restTemplate' defined in class path resource [com/biznovelty/gdicsms/controller/SmsController.class]: Unsatisfied dependency expressed through method 'restTemplate' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'smsResource' defined in file [E:\project\gdic-sms\bin\main\com\biznovelty\gdicsms\smsresource\SmsResource.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.biznovelty.gdicsms.smsresource.SmsResource]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.service.MyUserDetailsService cannot be resolved
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'smsResource' defined in file [E:\project\gdic-sms\bin\main\com\biznovelty\gdicsms\smsresource\SmsResource.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.biznovelty.gdicsms.smsresource.SmsResource]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.service.MyUserDetailsService cannot be resolved
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1320) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 38 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.biznovelty.gdicsms.smsresource.SmsResource]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.service.MyUserDetailsService cannot be resolved
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:216) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1312) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 50 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import com.biznovelty.gdicsms.service.MyUserDetailsService cannot be resolved
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+	Duplicate annotation of non-repeatable type @Autowired. Only annotation types marked @Repeatable can be used multiple times at one target.
+
+	at com.biznovelty.gdicsms.smsresource.SmsResource.<init>(SmsResource.java:23) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:203) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	... 52 common frames omitted
+2020-01-30 09:31:56 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9180 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 09:31:56 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 09:31:57 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 09:31:57 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 09:31:57 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 09:31:57 [restartedMain] INFO  o.a.c.c.C.[Tomcat-6].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 09:31:57 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 295 ms
+2020-01-30 09:31:57 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: edcde832-6c75-4d16-bd21-b1e73b2cef42
+
+2020-01-30 09:31:57 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2a40d71, org.springframework.security.web.context.SecurityContextPersistenceFilter@2013cb03, org.springframework.security.web.header.HeaderWriterFilter@36062edc, org.springframework.security.web.csrf.CsrfFilter@268ef7a4, org.springframework.security.web.authentication.logout.LogoutFilter@28e03543, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@41b73282, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3e7633d9, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@38610ddc, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@c92358, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4102273a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46758108, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e5157c6, org.springframework.security.web.session.SessionManagementFilter@71f1214e, org.springframework.security.web.access.ExceptionTranslationFilter@49f510b3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@250b2e86]
+2020-01-30 09:31:57 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 09:31:57 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 09:31:57 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.423 seconds (JVM running for 235.59)
+2020-01-30 09:31:57 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnBean (types: org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   UserDetailsServiceAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+      - @ConditionalOnBean (types: org.springframework.security.config.annotation.ObjectPostProcessor; SearchStrategy: all) found bean 'objectPostProcessor'; @ConditionalOnBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.oauth2.jwt.JwtDecoder,org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   UserDetailsServiceAutoConfiguration#inMemoryUserDetailsManager matched:
+      - @ConditionalOnBean (types: org.springframework.security.oauth2.client.registration.ClientRegistrationRepository; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebSecurityEnablerConfiguration matched:
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnBean (types: org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter; SearchStrategy: all) found bean 'org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration$DefaultConfigurerAdapter'; @ConditionalOnBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2020-01-30 09:32:05 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat-6].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 09:32:05 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 09:32:05 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2020-01-30 09:32:06 [http-nio-8080-exec-2] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [1,198] milliseconds.
+2020-01-30 09:32:24 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9180 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 09:32:24 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 09:32:24 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 09:32:24 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 09:32:24 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 09:32:24 [restartedMain] INFO  o.a.c.c.C.[Tomcat-6].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 09:32:24 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 238 ms
+2020-01-30 09:32:25 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 9170f083-e66e-4200-bdf0-0d707a66813a
+
+2020-01-30 09:32:25 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@23aa62dd, org.springframework.security.web.context.SecurityContextPersistenceFilter@474e69c8, org.springframework.security.web.header.HeaderWriterFilter@76551020, org.springframework.security.web.csrf.CsrfFilter@19416d83, org.springframework.security.web.authentication.logout.LogoutFilter@31a1953b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1c942204, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@58cb3f24, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@435be538, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5423dfd2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ab0e67e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@43a3918, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7ee27b55, org.springframework.security.web.session.SessionManagementFilter@55f13b80, org.springframework.security.web.access.ExceptionTranslationFilter@c822c2b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4c059292]
+2020-01-30 09:32:25 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 09:32:25 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 09:32:25 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.605 seconds (JVM running for 263.602)
+2020-01-30 09:32:25 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 09:32:31 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat-6].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 09:32:31 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 09:32:31 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2020-01-30 09:33:06 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9180 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 09:33:06 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 09:33:06 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 09:33:06 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 09:33:06 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 09:33:06 [restartedMain] INFO  o.a.c.c.C.[Tomcat-6].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 09:33:06 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 155 ms
+2020-01-30 09:33:06 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: ee9088e8-ef28-44aa-ad43-ab15ab7b0aec
+
+2020-01-30 09:33:06 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@685cc319, org.springframework.security.web.context.SecurityContextPersistenceFilter@5093fdc2, org.springframework.security.web.header.HeaderWriterFilter@55c95019, org.springframework.security.web.csrf.CsrfFilter@7e514bd9, org.springframework.security.web.authentication.logout.LogoutFilter@22d46352, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@605d099f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3d03e743, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@54e8de8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7d14d88f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@45f2b8f0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5aa471cf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@dd77d2f, org.springframework.security.web.session.SessionManagementFilter@24686515, org.springframework.security.web.access.ExceptionTranslationFilter@56e8639b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@19d8c46]
+2020-01-30 09:33:06 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 09:33:06 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 09:33:06 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.26 seconds (JVM running for 304.548)
+2020-01-30 09:33:06 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 09:33:09 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat-6].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 09:33:09 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 09:33:09 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2020-01-30 09:33:20 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9180 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 09:33:20 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 09:33:21 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 09:33:21 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 09:33:21 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 09:33:21 [restartedMain] INFO  o.a.c.c.C.[Tomcat-6].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 09:33:21 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 134 ms
+2020-01-30 09:33:21 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 91ab2df4-00b3-4724-afdd-34bb6f4a5770
+
+2020-01-30 09:33:21 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c8c5bba, org.springframework.security.web.context.SecurityContextPersistenceFilter@4bd9ecc6, org.springframework.security.web.header.HeaderWriterFilter@701ecd04, org.springframework.security.web.csrf.CsrfFilter@131c8c1f, org.springframework.security.web.authentication.logout.LogoutFilter@49710c5d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5cefc146, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4f3c10d9, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5ce8dff, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@53e12821, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62ac1b02, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@64dc9cbe, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@278989f1, org.springframework.security.web.session.SessionManagementFilter@3c52e327, org.springframework.security.web.access.ExceptionTranslationFilter@4f8cda0d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5729ce4a]
+2020-01-30 09:33:21 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 09:33:21 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 09:33:21 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.234 seconds (JVM running for 319.46)
+2020-01-30 09:33:21 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 09:36:30 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9180 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 09:36:30 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 09:36:30 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 09:36:30 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 09:36:30 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 09:36:30 [restartedMain] INFO  o.a.c.c.C.[Tomcat-6].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 09:36:30 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 154 ms
+2020-01-30 09:36:31 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 9a4c9fa6-5d31-4a30-8c7c-afeaaba49f56
+
+2020-01-30 09:36:31 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4df38eb8, org.springframework.security.web.context.SecurityContextPersistenceFilter@45f06dc7, org.springframework.security.web.header.HeaderWriterFilter@7fcac695, org.springframework.security.web.csrf.CsrfFilter@24479950, org.springframework.security.web.authentication.logout.LogoutFilter@69571f45, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5cfde236, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@583f16a0, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1b208296, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2e31c900, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36e8521, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a3905b7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28ff2f96, org.springframework.security.web.session.SessionManagementFilter@5de5f232, org.springframework.security.web.access.ExceptionTranslationFilter@1b9ba870, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5a018090]
+2020-01-30 09:36:31 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 09:36:31 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 09:36:31 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.325 seconds (JVM running for 509.344)
+2020-01-30 09:36:31 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 09:36:38 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9180 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 09:36:38 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 09:36:38 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 09:36:38 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 09:36:38 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 09:36:38 [restartedMain] INFO  o.a.c.c.C.[Tomcat-6].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 09:36:38 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 139 ms
+2020-01-30 09:36:38 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: e88c9bff-0127-4d9d-b523-847d2e402536
+
+2020-01-30 09:36:38 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@54063598, org.springframework.security.web.context.SecurityContextPersistenceFilter@60782387, org.springframework.security.web.header.HeaderWriterFilter@53b78f57, org.springframework.security.web.csrf.CsrfFilter@3a789555, org.springframework.security.web.authentication.logout.LogoutFilter@3a6a1f43, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@13c36f2e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4b0eb4c3, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4293cf06, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7c7506dc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c399915, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@731b70f2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a217265, org.springframework.security.web.session.SessionManagementFilter@1ed4cf35, org.springframework.security.web.access.ExceptionTranslationFilter@7161bb96, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@72dc9bed]
+2020-01-30 09:36:38 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 09:36:38 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 09:36:38 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.231 seconds (JVM running for 517.132)
+2020-01-30 09:36:38 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 09:37:29 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat-6].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 09:37:29 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 09:37:29 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2020-01-30 10:07:33 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9180 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 10:07:33 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 10:07:34 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 10:07:34 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 10:07:34 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 10:07:34 [restartedMain] INFO  o.a.c.c.C.[Tomcat-6].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 10:07:34 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1484 ms
+2020-01-30 10:07:35 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 8eea879c-e663-4586-8ba5-7536872ce08c
+
+2020-01-30 10:07:35 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2799487f, org.springframework.security.web.context.SecurityContextPersistenceFilter@713bc68f, org.springframework.security.web.header.HeaderWriterFilter@53425fad, org.springframework.security.web.csrf.CsrfFilter@10fa0f2d, org.springframework.security.web.authentication.logout.LogoutFilter@4cee506f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@eeebd9a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@56a6890d, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@64204b3c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@8f90312, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@677722a6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2689b6d2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f59284f, org.springframework.security.web.session.SessionManagementFilter@31f824fa, org.springframework.security.web.access.ExceptionTranslationFilter@48dbc03e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4750954d]
+2020-01-30 10:07:35 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 10:07:35 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 10:07:35 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 2.205 seconds (JVM running for 2373.728)
+2020-01-30 10:07:35 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 10:07:35 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2020-01-30 10:31:47 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9468 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 10:31:47 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 10:31:47 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-01-30 10:31:47 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-01-30 10:31:48 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 10:31:48 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 10:31:48 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 10:31:48 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 10:31:48 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 927 ms
+2020-01-30 10:31:49 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@173abb8, org.springframework.security.web.context.SecurityContextPersistenceFilter@5b5bb567, org.springframework.security.web.header.HeaderWriterFilter@10918a89, org.springframework.security.web.authentication.logout.LogoutFilter@1dd6b22c, com.biznovelty.gdicsms.filter.JwtRequestFilter@74fbe3f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@157b804e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ce288ec, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5936b200, org.springframework.security.web.session.SessionManagementFilter@38fa8f15, org.springframework.security.web.access.ExceptionTranslationFilter@6245a9b4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@606554a9]
+2020-01-30 10:31:49 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 10:31:49 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 10:31:49 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 1.76 seconds (JVM running for 2.877)
+2020-01-30 10:32:10 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 10:32:10 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 10:32:10 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 21 ms
+2020-01-30 10:33:28 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9468 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 10:33:28 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 10:33:28 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 10:33:28 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 10:33:28 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 10:33:28 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 10:33:28 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 189 ms
+2020-01-30 10:33:28 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b39925a, org.springframework.security.web.context.SecurityContextPersistenceFilter@21390d44, org.springframework.security.web.header.HeaderWriterFilter@7ec46e79, org.springframework.security.web.authentication.logout.LogoutFilter@1661a2c4, com.biznovelty.gdicsms.filter.JwtRequestFilter@411732fd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@230577d0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7eef626f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@cd7ae45, org.springframework.security.web.session.SessionManagementFilter@762ee36f, org.springframework.security.web.access.ExceptionTranslationFilter@6cfdc863, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@289df9c0]
+2020-01-30 10:33:29 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 10:33:29 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 10:33:29 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.332 seconds (JVM running for 102.52)
+2020-01-30 10:33:29 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 10:33:35 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 10:33:35 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 10:33:35 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2020-01-30 10:35:05 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9468 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 10:35:05 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 10:35:05 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 10:35:05 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 10:35:05 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 10:35:05 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 10:35:05 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 325 ms
+2020-01-30 10:35:06 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53e0eaaa, org.springframework.security.web.context.SecurityContextPersistenceFilter@1c7a3d44, org.springframework.security.web.header.HeaderWriterFilter@457d2220, org.springframework.security.web.authentication.logout.LogoutFilter@7e36a4d0, com.biznovelty.gdicsms.filter.JwtRequestFilter@5af6969e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5816188f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74565d8f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@198f689c, org.springframework.security.web.session.SessionManagementFilter@e892e77, org.springframework.security.web.access.ExceptionTranslationFilter@16da5e4a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7e02ac0]
+2020-01-30 10:35:06 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 10:35:06 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 10:35:06 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.461 seconds (JVM running for 199.546)
+2020-01-30 10:35:06 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 10:35:12 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9468 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 10:35:12 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 10:35:12 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 10:35:12 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 10:35:12 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 10:35:12 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 10:35:12 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 152 ms
+2020-01-30 10:35:12 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@70460cf3, org.springframework.security.web.context.SecurityContextPersistenceFilter@39c0c156, org.springframework.security.web.header.HeaderWriterFilter@5c7d90d3, org.springframework.security.web.authentication.logout.LogoutFilter@42e5374f, com.biznovelty.gdicsms.filter.JwtRequestFilter@46d515ad, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d2bcd2d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7de02753, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b23b32e, org.springframework.security.web.session.SessionManagementFilter@7d2fabee, org.springframework.security.web.access.ExceptionTranslationFilter@3979bcc7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@48d60297]
+2020-01-30 10:35:12 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 10:35:12 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 10:35:12 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.255 seconds (JVM running for 206.416)
+2020-01-30 10:35:12 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 10:35:57 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9468 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 10:35:57 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 10:35:57 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 10:35:57 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 10:35:57 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 10:35:57 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 10:35:57 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 154 ms
+2020-01-30 10:35:57 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4017d963, org.springframework.security.web.context.SecurityContextPersistenceFilter@6b86a9cd, org.springframework.security.web.header.HeaderWriterFilter@51829a21, org.springframework.security.web.authentication.logout.LogoutFilter@979d7ee, com.biznovelty.gdicsms.filter.JwtRequestFilter@70068c29, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37c798c4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@72d14f8f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@134da1a4, org.springframework.security.web.session.SessionManagementFilter@6869ae44, org.springframework.security.web.access.ExceptionTranslationFilter@479361d8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@d56e9af]
+2020-01-30 10:35:57 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 10:35:57 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 10:35:57 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.254 seconds (JVM running for 251.435)
+2020-01-30 10:35:57 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 10:36:03 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 10:36:03 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 10:36:03 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2020-01-30 10:36:23 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9468 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 10:36:23 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 10:36:23 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 10:36:23 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 10:36:23 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 10:36:23 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 10:36:23 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 147 ms
+2020-01-30 10:36:23 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5773139e, org.springframework.security.web.context.SecurityContextPersistenceFilter@6cd6b6e, org.springframework.security.web.header.HeaderWriterFilter@264a7bff, org.springframework.security.web.authentication.logout.LogoutFilter@18320de, com.biznovelty.gdicsms.filter.JwtRequestFilter@699dadf8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5bcfe3de, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2e2feedb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7985e79d, org.springframework.security.web.session.SessionManagementFilter@71666e64, org.springframework.security.web.access.ExceptionTranslationFilter@48e2b7ae, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@57c6b50f]
+2020-01-30 10:36:23 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 10:36:23 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 10:36:23 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.247 seconds (JVM running for 277.408)
+2020-01-30 10:36:23 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 10:36:30 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 10:36:30 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 10:36:30 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2020-01-30 10:36:31 [http-nio-8080-exec-2] INFO  c.b.gdicsms.smsresource.SmsResource - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZGljIiwiaWF0IjoxNTgwMzU4OTkwLCJleHAiOjE1ODAzNTk1OTB9.Q6Gl53eV2YN7wcIi_vjeuyb8DfMKxPJEpMzk3mmGatg
+2020-01-30 10:42:33 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9468 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 10:42:33 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 10:42:34 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 10:42:34 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 10:42:34 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 10:42:34 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 10:42:34 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 161 ms
+2020-01-30 10:42:34 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@10de09cb, org.springframework.security.web.context.SecurityContextPersistenceFilter@1d5c5f25, org.springframework.security.web.header.HeaderWriterFilter@230277d3, org.springframework.security.web.authentication.logout.LogoutFilter@4a9ca3f9, com.biznovelty.gdicsms.filter.JwtRequestFilter@45ab4843, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@27bcf1aa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1730a661, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@66fc30bd, org.springframework.security.web.session.SessionManagementFilter@66289f93, org.springframework.security.web.access.ExceptionTranslationFilter@3da0ef53, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2ec2bad7]
+2020-01-30 10:42:34 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 10:42:34 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 10:42:34 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.258 seconds (JVM running for 647.575)
+2020-01-30 10:42:34 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 10:42:37 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 10:42:37 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 10:42:37 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2020-01-30 10:42:37 [http-nio-8080-exec-3] INFO  c.b.gdicsms.smsresource.SmsResource - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZGljIiwiaWF0IjoxNTgwMzU5MzU3LCJleHAiOjE1ODAzNTk5NTd9.91xR3iU9W4ZfM2CxD-hMew14Q_Uw3197-gGb6bVaNSw
+2020-01-30 10:43:19 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9468 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 10:43:19 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 10:43:20 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 10:43:20 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 10:43:20 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 10:43:20 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 10:43:20 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 180 ms
+2020-01-30 10:43:20 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1cdc94eb, org.springframework.security.web.context.SecurityContextPersistenceFilter@404ba95d, org.springframework.security.web.header.HeaderWriterFilter@7f624d8c, org.springframework.security.web.authentication.logout.LogoutFilter@59909611, com.biznovelty.gdicsms.filter.JwtRequestFilter@34a84b20, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e4fe871, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@632cca19, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65a66dbd, org.springframework.security.web.session.SessionManagementFilter@643867ef, org.springframework.security.web.access.ExceptionTranslationFilter@77d723b6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@15107957]
+2020-01-30 10:43:20 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 10:43:20 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 10:43:20 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.291 seconds (JVM running for 693.743)
+2020-01-30 10:43:20 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 10:43:22 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 10:43:22 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 10:43:22 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2020-01-30 10:43:22 [http-nio-8080-exec-2] INFO  c.b.gdicsms.smsresource.SmsResource - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZGljIiwiaWF0IjoxNTgwMzU5NDAyLCJleHAiOjE1ODAzNjAwMDJ9.A4xQPTLK2322SC6Rct1c4c1dhQvYdNeeBaRAFnW917I
+2020-01-30 10:43:53 [http-nio-8080-exec-3] INFO  c.b.gdicsms.smsresource.SmsResource - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZGljIiwiaWF0IjoxNTgwMzU5NDMzLCJleHAiOjE1ODAzNjAwMzN9.ega1iGjK4j-Bhkey1CnKetSrjkOsYrBd10NY7Typq7g
+2020-01-30 10:44:07 [http-nio-8080-exec-4] INFO  c.b.gdicsms.smsresource.SmsResource - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZGljIiwiaWF0IjoxNTgwMzU5NDQ3LCJleHAiOjE1ODAzNjAwNDd9.uhCF6A-w12nHahNn96cvNq0UPIFQB53sFWN8EA43PNU
+2020-01-30 10:44:19 [http-nio-8080-exec-7] INFO  c.b.gdicsms.smsresource.SmsResource - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZGljIiwiaWF0IjoxNTgwMzU5NDU5LCJleHAiOjE1ODAzNjAwNTl9.qNF5A5NwjDgjorWtEjBoCHRaz4ikl00sYlBzbSq1ebI
+2020-01-30 10:44:35 [http-nio-8080-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2020-01-29T12:12:33Z. Current time: 2020-01-30T04:44:35Z, a difference of 59522065 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:411) ~[jjwt-impl-0.10.7.jar:na]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:513) ~[jjwt-impl-0.10.7.jar:na]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:573) ~[jjwt-impl-0.10.7.jar:na]
+	at com.biznovelty.gdicsms.util.JwtUtil.extractAllClaims(JwtUtil.java:38) ~[main/:na]
+	at com.biznovelty.gdicsms.util.JwtUtil.extractClaim(JwtUtil.java:33) ~[main/:na]
+	at com.biznovelty.gdicsms.util.JwtUtil.extractUserName(JwtUtil.java:25) ~[main/:na]
+	at com.biznovelty.gdicsms.filter.JwtRequestFilter.doFilterInternal(JwtRequestFilter.java:40) ~[main/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.0.M1.jar:5.3.0.M1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.3.0.M1.jar:5.3.0.M1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.0.M1.jar:5.3.0.M1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.3.0.M1.jar:5.3.0.M1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.3.0.M1.jar:5.3.0.M1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.0.M1.jar:5.3.0.M1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.3.0.M1.jar:5.3.0.M1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.0.M1.jar:5.3.0.M1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.3.0.M1.jar:5.3.0.M1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.0.M1.jar:5.3.0.M1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.3.0.M1.jar:5.3.0.M1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.3.0.M1.jar:5.3.0.M1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.3.RELEASE.jar:5.2.3.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.30.jar:9.0.30]
+	at java.base/java.lang.Thread.run(Thread.java:830) ~[na:na]
+2020-01-30 10:44:57 [http-nio-8080-exec-10] INFO  c.b.gdicsms.GdicSmsApplication - SmsResponse [username=null, password=null, action=null, timestamp=null, url=null, receipient=null, message=null, status=failure]
+2020-01-30 10:46:42 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9468 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 10:46:42 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 10:46:42 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 10:46:42 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 10:46:42 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 10:46:42 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 10:46:42 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 151 ms
+2020-01-30 10:46:42 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@196bb3f1, org.springframework.security.web.context.SecurityContextPersistenceFilter@3e7e1d54, org.springframework.security.web.header.HeaderWriterFilter@583011ac, org.springframework.security.web.authentication.logout.LogoutFilter@4690b3fc, com.biznovelty.gdicsms.filter.JwtRequestFilter@24f2b9ea, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@38dec381, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@603b1847, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@692769c5, org.springframework.security.web.session.SessionManagementFilter@16afd6ca, org.springframework.security.web.access.ExceptionTranslationFilter@4899d7e5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@42bd4ccc]
+2020-01-30 10:46:42 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 10:46:42 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 10:46:42 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.246 seconds (JVM running for 895.889)
+2020-01-30 10:46:42 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 10:46:56 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9468 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 10:46:56 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 10:46:56 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 10:46:56 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 10:46:56 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 10:46:56 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 10:46:56 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 215 ms
+2020-01-30 10:46:56 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@cbb97d5, org.springframework.security.web.context.SecurityContextPersistenceFilter@4916ff14, org.springframework.security.web.header.HeaderWriterFilter@3a47b00f, org.springframework.security.web.authentication.logout.LogoutFilter@e8f5b90, com.biznovelty.gdicsms.filter.JwtRequestFilter@65c30166, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@24bd7735, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@237d7c65, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2844e201, org.springframework.security.web.session.SessionManagementFilter@211e55ef, org.springframework.security.web.access.ExceptionTranslationFilter@efc6744, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@172fc941]
+2020-01-30 10:46:56 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 10:46:56 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 10:46:56 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.342 seconds (JVM running for 909.847)
+2020-01-30 10:46:56 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 10:47:16 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9468 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 10:47:16 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 10:47:16 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 10:47:16 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 10:47:16 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 10:47:16 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 10:47:16 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 156 ms
+2020-01-30 10:47:16 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15da48ba, org.springframework.security.web.context.SecurityContextPersistenceFilter@2f9321ff, org.springframework.security.web.header.HeaderWriterFilter@46a0f794, org.springframework.security.web.authentication.logout.LogoutFilter@61e17de8, com.biznovelty.gdicsms.filter.JwtRequestFilter@1870cf05, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@700240d4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31df0517, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3d2d13c7, org.springframework.security.web.session.SessionManagementFilter@2ec83c8, org.springframework.security.web.access.ExceptionTranslationFilter@165922e3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@111e85ac]
+2020-01-30 10:47:16 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 10:47:16 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 10:47:16 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.248 seconds (JVM running for 929.749)
+2020-01-30 10:47:16 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 10:47:52 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2020-01-30 15:01:44 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9452 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 15:01:44 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 15:01:44 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-01-30 15:01:44 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-01-30 15:01:48 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 15:01:48 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 15:01:48 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 15:01:48 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 15:01:48 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4655 ms
+2020-01-30 15:01:49 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f1272c8, org.springframework.security.web.context.SecurityContextPersistenceFilter@522fe024, org.springframework.security.web.header.HeaderWriterFilter@3b15dadb, org.springframework.security.web.authentication.logout.LogoutFilter@289093e4, com.biznovelty.gdicsms.filter.JwtRequestFilter@73cb5b41, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3af81740, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@266a4e49, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@629121f8, org.springframework.security.web.session.SessionManagementFilter@5881cdca, org.springframework.security.web.access.ExceptionTranslationFilter@5242aafc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@33c0a69a]
+2020-01-30 15:01:49 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 15:01:49 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 15:01:49 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 6.6 seconds (JVM running for 20.242)
+2020-01-30 15:02:26 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 15:02:26 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 15:02:26 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 34 ms
+2020-01-30 15:05:29 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9452 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 15:05:29 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 15:05:31 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 15:05:31 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 15:05:31 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 15:05:32 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 15:05:32 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2754 ms
+2020-01-30 15:05:32 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2114b23c, org.springframework.security.web.context.SecurityContextPersistenceFilter@36e6f707, org.springframework.security.web.header.HeaderWriterFilter@1b953c16, org.springframework.security.web.authentication.logout.LogoutFilter@4c1e15bf, com.biznovelty.gdicsms.filter.JwtRequestFilter@347d773, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42559c18, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@70926dc8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6915618, org.springframework.security.web.session.SessionManagementFilter@6c2a2895, org.springframework.security.web.access.ExceptionTranslationFilter@73d0f2f9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3158705a]
+2020-01-30 15:05:32 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 15:05:32 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 15:05:32 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 3.186 seconds (JVM running for 242.949)
+2020-01-30 15:05:32 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 15:06:17 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 15:06:17 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 15:06:17 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2020-01-30 15:07:23 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9452 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 15:07:23 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 15:07:24 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 15:07:24 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 15:07:24 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 15:07:24 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 15:07:24 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 355 ms
+2020-01-30 15:07:24 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ed9ecc2, org.springframework.security.web.context.SecurityContextPersistenceFilter@43100103, org.springframework.security.web.header.HeaderWriterFilter@35d45454, org.springframework.security.web.authentication.logout.LogoutFilter@4763e7f4, com.biznovelty.gdicsms.filter.JwtRequestFilter@60ff65f3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4bcbb9a8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c2a2271, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@88f7e55, org.springframework.security.web.session.SessionManagementFilter@4a624518, org.springframework.security.web.access.ExceptionTranslationFilter@7dcea3ba, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e331e51]
+2020-01-30 15:07:24 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 15:07:24 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 15:07:24 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.493 seconds (JVM running for 354.905)
+2020-01-30 15:07:24 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 15:08:25 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 15:08:25 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 15:08:25 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2020-01-30 15:08:54 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9452 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 15:08:54 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 15:08:55 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 15:08:55 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 15:08:55 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 15:08:55 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 15:08:55 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 542 ms
+2020-01-30 15:08:55 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6bace97b, org.springframework.security.web.context.SecurityContextPersistenceFilter@c6af756, org.springframework.security.web.header.HeaderWriterFilter@6e689539, org.springframework.security.web.authentication.logout.LogoutFilter@2fa0017d, com.biznovelty.gdicsms.filter.JwtRequestFilter@7e59e605, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6463783d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4e88e8d5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6efe26bb, org.springframework.security.web.session.SessionManagementFilter@565d889d, org.springframework.security.web.access.ExceptionTranslationFilter@55db799, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@678f8876]
+2020-01-30 15:08:55 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 15:08:55 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 15:08:55 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.709 seconds (JVM running for 445.988)
+2020-01-30 15:08:55 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 15:09:00 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 15:09:00 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 15:09:00 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2020-01-30 15:09:33 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9452 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 15:09:33 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 15:09:33 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 15:09:33 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 15:09:33 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 15:09:33 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 15:09:33 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 205 ms
+2020-01-30 15:09:33 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79a45654, org.springframework.security.web.context.SecurityContextPersistenceFilter@5c189d6f, org.springframework.security.web.header.HeaderWriterFilter@77cd8ed0, org.springframework.security.web.authentication.logout.LogoutFilter@62b2261d, com.biznovelty.gdicsms.filter.JwtRequestFilter@216f2b9b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5a413520, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@41e19bb6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@566c5f7f, org.springframework.security.web.session.SessionManagementFilter@7cb8e779, org.springframework.security.web.access.ExceptionTranslationFilter@713eec20, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4250e78a]
+2020-01-30 15:09:33 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 15:09:33 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 15:09:33 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.611 seconds (JVM running for 484.428)
+2020-01-30 15:09:33 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 15:09:38 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 15:09:38 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 15:09:38 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2020-01-30 15:13:40 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9452 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 15:13:40 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 15:13:42 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 15:13:42 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 15:13:42 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 15:13:42 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 15:13:42 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1671 ms
+2020-01-30 15:13:42 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@172105ba, org.springframework.security.web.context.SecurityContextPersistenceFilter@4647ef69, org.springframework.security.web.header.HeaderWriterFilter@13c9420c, org.springframework.security.web.authentication.logout.LogoutFilter@3a897f9c, com.biznovelty.gdicsms.filter.JwtRequestFilter@19d676ce, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4159d7c3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18d924c6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@62d76407, org.springframework.security.web.session.SessionManagementFilter@73a51d73, org.springframework.security.web.access.ExceptionTranslationFilter@1c93714b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e9a6313]
+2020-01-30 15:13:42 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 15:13:42 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 15:13:42 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 1.97 seconds (JVM running for 732.967)
+2020-01-30 15:13:42 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 15:13:49 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 15:13:49 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 15:13:49 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2020-01-30 15:17:17 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9452 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 15:17:17 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 15:17:19 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 15:17:19 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 15:17:19 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 15:17:19 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 15:17:19 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1664 ms
+2020-01-30 15:17:19 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30a1db66, org.springframework.security.web.context.SecurityContextPersistenceFilter@5975b24, org.springframework.security.web.header.HeaderWriterFilter@1415f2df, org.springframework.security.web.authentication.logout.LogoutFilter@167dead4, com.biznovelty.gdicsms.filter.JwtRequestFilter@583e2ca7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@13c5f20, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a04c6d2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8c8e249, org.springframework.security.web.session.SessionManagementFilter@651ed0a8, org.springframework.security.web.access.ExceptionTranslationFilter@3a37d30d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@71d722c7]
+2020-01-30 15:17:19 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 15:17:19 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 15:17:19 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 1.94 seconds (JVM running for 950.316)
+2020-01-30 15:17:19 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 15:17:47 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 15:17:47 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 15:17:47 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2020-01-30 15:17:49 [http-nio-8080-exec-2] INFO  c.b.gdicsms.smsresource.SmsResource - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZGljIiwiaWF0IjoxNTgwMzc1ODY5LCJleHAiOjE1ODAzNzY0Njl9.2Oggg4K13j3sCzMFM8KZJl7Ct_pD9KK2diX9dqFIZOk
+2020-01-30 15:19:07 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9452 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 15:19:07 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 15:19:07 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 15:19:07 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 15:19:07 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 15:19:07 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 15:19:07 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 300 ms
+2020-01-30 15:19:07 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46f9891a, org.springframework.security.web.context.SecurityContextPersistenceFilter@75154204, org.springframework.security.web.header.HeaderWriterFilter@7d285b25, org.springframework.security.web.authentication.logout.LogoutFilter@17dac865, com.biznovelty.gdicsms.filter.JwtRequestFilter@146e323e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e57cf6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f2bfebc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@55eba65f, org.springframework.security.web.session.SessionManagementFilter@6182cbc9, org.springframework.security.web.access.ExceptionTranslationFilter@16e8d75, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@749ad512]
+2020-01-30 15:19:07 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 15:19:07 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 15:19:07 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.454 seconds (JVM running for 1058.038)
+2020-01-30 15:19:07 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 15:19:19 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 15:19:19 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 15:19:19 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2020-01-30 15:19:19 [http-nio-8080-exec-1] INFO  c.b.gdicsms.smsresource.SmsResource - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZGljIiwiaWF0IjoxNTgwMzc1OTU5LCJleHAiOjE1ODAzNzY1NTl9.08IQoFkX8LTJuwFp-VrhE7lMMh2KcVkPt9pCQhYH0MA
+2020-01-30 15:23:23 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9452 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 15:23:23 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 15:23:24 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 15:23:24 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 15:23:24 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 15:23:24 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 15:23:24 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 979 ms
+2020-01-30 15:23:24 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@157c01ec, org.springframework.security.web.context.SecurityContextPersistenceFilter@21cef308, org.springframework.security.web.header.HeaderWriterFilter@6b73cbf2, org.springframework.security.web.authentication.logout.LogoutFilter@47f40977, com.biznovelty.gdicsms.filter.JwtRequestFilter@7fba5e54, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6af610e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f2f7a17, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57aea7c4, org.springframework.security.web.session.SessionManagementFilter@14c352d2, org.springframework.security.web.access.ExceptionTranslationFilter@42112c55, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4e135adf]
+2020-01-30 15:23:24 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 15:23:24 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 15:23:24 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 1.246 seconds (JVM running for 1315.087)
+2020-01-30 15:23:24 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 15:34:35 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 15:34:35 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 15:34:35 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2020-01-30 15:34:35 [http-nio-8080-exec-1] INFO  c.b.gdicsms.smsresource.SmsResource - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZGljIiwiaWF0IjoxNTgwMzc2ODc1LCJleHAiOjE1ODAzNzc0NzV9.BnRcuZSpRApIPraw-LSBBsroxF8PwJJnP7blD1kTe90
+2020-01-30 16:09:30 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9452 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 16:09:30 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 16:09:32 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 16:09:32 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 16:09:32 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 16:09:32 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 16:09:32 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1630 ms
+2020-01-30 16:09:32 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@686c2295, org.springframework.security.web.context.SecurityContextPersistenceFilter@12c06f5c, org.springframework.security.web.header.HeaderWriterFilter@d138a3f, org.springframework.security.web.authentication.logout.LogoutFilter@69083e7a, com.biznovelty.gdicsms.filter.JwtRequestFilter@3e384452, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3e82a5c8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2fd19255, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@24220d3e, org.springframework.security.web.session.SessionManagementFilter@2ffdec0, org.springframework.security.web.access.ExceptionTranslationFilter@43ddf66a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c4f2e54]
+2020-01-30 16:09:32 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 16:09:32 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 16:09:32 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 2.418 seconds (JVM running for 4083.515)
+2020-01-30 16:09:32 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 16:09:43 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 16:09:43 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 16:09:43 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 22 ms
+2020-01-30 16:09:44 [http-nio-8080-exec-2] INFO  c.b.gdicsms.smsresource.SmsResource - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZGljIiwiaWF0IjoxNTgwMzc4OTg0LCJleHAiOjE1ODAzNzk1ODR9.zJoh_pXhCPUcuXm8ZZHUsuuT__xtNa7J8zo9PZ-SEIk
+2020-01-30 16:10:10 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9452 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 16:10:10 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 16:10:10 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 16:10:10 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 16:10:10 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 16:10:10 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 16:10:10 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 280 ms
+2020-01-30 16:10:10 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6217e538, org.springframework.security.web.context.SecurityContextPersistenceFilter@590b4af4, org.springframework.security.web.header.HeaderWriterFilter@b5ba7e3, org.springframework.security.web.authentication.logout.LogoutFilter@179eae14, com.biznovelty.gdicsms.filter.JwtRequestFilter@3207206d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16a32649, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4091ffc1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6357a5fd, org.springframework.security.web.session.SessionManagementFilter@1949a9a8, org.springframework.security.web.access.ExceptionTranslationFilter@74e7601c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@33217cd2]
+2020-01-30 16:10:10 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 16:10:10 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 16:10:10 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.638 seconds (JVM running for 4121.357)
+2020-01-30 16:10:10 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 16:34:30 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9452 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 16:34:30 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 16:34:31 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 16:34:31 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 16:34:31 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 16:34:31 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 16:34:31 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 846 ms
+2020-01-30 16:34:31 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7eee6b2c, org.springframework.security.web.context.SecurityContextPersistenceFilter@74107126, org.springframework.security.web.header.HeaderWriterFilter@4fe7df7a, org.springframework.security.web.authentication.logout.LogoutFilter@41a7e3f1, com.biznovelty.gdicsms.filter.JwtRequestFilter@52170678, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77f2c8e6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@69fd56d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@32614dee, org.springframework.security.web.session.SessionManagementFilter@43e25635, org.springframework.security.web.access.ExceptionTranslationFilter@2c55e684, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@22feb381]
+2020-01-30 16:34:32 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 16:34:32 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 16:34:32 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 1.254 seconds (JVM running for 5582.619)
+2020-01-30 16:34:32 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 16:35:42 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9452 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 16:35:42 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 16:35:43 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 16:35:43 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 16:35:43 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 16:35:43 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 16:35:43 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 716 ms
+2020-01-30 16:35:43 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35e54ceb, org.springframework.security.web.context.SecurityContextPersistenceFilter@730dc01f, org.springframework.security.web.header.HeaderWriterFilter@37e23ca5, org.springframework.security.web.authentication.logout.LogoutFilter@47ebb2e9, com.biznovelty.gdicsms.filter.JwtRequestFilter@3eec587b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6a647a2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@208754c7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f4553ac, org.springframework.security.web.session.SessionManagementFilter@6bd23a9c, org.springframework.security.web.access.ExceptionTranslationFilter@65a20f8b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25a3ab58]
+2020-01-30 16:35:43 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 16:35:44 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 16:35:44 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 1.504 seconds (JVM running for 5654.62)
+2020-01-30 16:35:44 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 16:35:54 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 9452 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 16:35:54 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 16:35:55 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 16:35:55 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 16:35:55 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 16:35:55 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 16:35:55 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 386 ms
+2020-01-30 16:35:55 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3013531d, org.springframework.security.web.context.SecurityContextPersistenceFilter@1b511792, org.springframework.security.web.header.HeaderWriterFilter@24b6c5e6, org.springframework.security.web.authentication.logout.LogoutFilter@1b2b0f87, com.biznovelty.gdicsms.filter.JwtRequestFilter@f3cf323, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@eaf58a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12e19984, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c0c1b78, org.springframework.security.web.session.SessionManagementFilter@c62c981, org.springframework.security.web.access.ExceptionTranslationFilter@5569d933, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@29108682]
+2020-01-30 16:35:55 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 16:35:55 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 16:35:55 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 0.721 seconds (JVM running for 5666.132)
+2020-01-30 16:35:55 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-01-30 16:40:19 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 16:40:19 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 16:40:20 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 669 ms
+2020-01-30 16:40:24 [http-nio-8080-exec-1] INFO  c.b.gdicsms.smsresource.SmsResource - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZGljIiwiaWF0IjoxNTgwMzgwODI0LCJleHAiOjE1ODAzODE0MjR9.VKLC7P98E6FBZ0MrDDRGtd1zX5xI5ozYLzF2uVaaGLo
+2020-01-30 16:41:57 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2020-01-30 17:55:29 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Starting GdicSmsApplication on DESKTOP-3IAH1IJ with PID 12956 (E:\project\gdic-sms\bin\main started by Office in E:\project\gdic-sms)
+2020-01-30 17:55:29 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - No active profile set, falling back to default profiles: default
+2020-01-30 17:55:29 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-01-30 17:55:29 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-01-30 17:55:32 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2020-01-30 17:55:32 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-30 17:55:32 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-01-30 17:55:32 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-30 17:55:32 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2753 ms
+2020-01-30 17:55:32 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7104b440, org.springframework.security.web.context.SecurityContextPersistenceFilter@5d2012b1, org.springframework.security.web.header.HeaderWriterFilter@337f0f43, org.springframework.security.web.authentication.logout.LogoutFilter@652be683, com.biznovelty.gdicsms.filter.JwtRequestFilter@56e0fcaa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34b8b33f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2aac6a91, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79981be, org.springframework.security.web.session.SessionManagementFilter@3bc6d5d3, org.springframework.security.web.access.ExceptionTranslationFilter@39a7f025, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@11ec6c20]
+2020-01-30 17:55:33 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-30 17:55:33 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-30 17:55:33 [restartedMain] INFO  c.b.gdicsms.GdicSmsApplication - Started GdicSmsApplication in 7.895 seconds (JVM running for 14.845)
+2020-01-30 17:56:32 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-30 17:56:32 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-30 17:56:32 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2020-01-30 17:56:33 [http-nio-8080-exec-2] INFO  c.b.gdicsms.smsresource.SmsResource - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZGljIiwiaWF0IjoxNTgwMzg1MzkzLCJleHAiOjE1ODAzODU5OTN9.KU0P6-zJAoNw2qoxKsVrT3IsQwrs6YAT47SJ4_0FCio
+2020-01-30 17:57:26 [http-nio-8080-exec-4] INFO  c.b.gdicsms.smsresource.SmsResource - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZGljIiwiaWF0IjoxNTgwMzg1NDQ2LCJleHAiOjE1ODAzODYwNDZ9.ZneH-L3BYjKcLsIk07C4xmk-0LQFL-ns5mX38MRBKrQ
+2020-01-30 18:01:20 [http-nio-8080-exec-8] INFO  c.b.gdicsms.smsresource.SmsResource - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZGljIiwiaWF0IjoxNTgwMzg1NjgwLCJleHAiOjE1ODAzODYyODB9.OvmqHA58581_tewX16eCt7l5QTHw0o1iKhJYbOeFzKA
+2020-01-30 18:18:21 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
