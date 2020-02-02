@@ -51,7 +51,7 @@ public class SmsResource {
 
 	}
 
-	@RequestMapping(value = "/authenticate", method = RequestMethod.POST)
+	@RequestMapping(value = "/authenticate", method = {RequestMethod.POST, RequestMethod.OPTIONS})
 	public ResponseEntity<?> creatAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest)
 			throws Exception {
 		try {
