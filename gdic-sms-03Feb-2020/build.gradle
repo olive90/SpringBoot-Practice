@@ -1,0 +1,54 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+	id 'war'
+}
+
+group = 'com.biznovelty.gdicsms'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '13'
+apply plugin: "eclipse"
+apply plugin: 'war'
+
+springBoot {
+	mainClassName = 'com.biznovelty.gdicsms.GdicSmsApplication'
+}
+
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	compile group: 'org.hibernate', name: 'hibernate-validator', version: '6.1.1.Final'
+	compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.4.0-b180830.0359'
+	compile group: 'org.springframework.security', name: 'spring-security-core', version: '5.2.1.RELEASE'
+	compile('org.springframework.boot:spring-boot-starter-security') //added dependency
+    compile('org.springframework.cloud:spring-cloud-starter-oauth2') //added dependency
+    compile('org.springframework.cloud:spring-cloud-starter-security') //added dependency
+	compile 'io.jsonwebtoken:jjwt-api:0.10.7'	//added dependency
+	runtime 'io.jsonwebtoken:jjwt-impl:0.10.7',	//added dependency
+            'io.jsonwebtoken:jjwt-jackson:0.10.7'	//added dependency
+	providedCompile group: 'org.projectlombok', name: 'lombok', version: '1.18.10'	//added dependency
+	compile group: 'javax.mail', name: 'mail', version: '1.5.0-b01'	//added dependency
+	compile group: 'com.quhaodian', name: 'freemaker', version: '1.8.1'	//added dependency
+	
+	testCompile group: 'ch.qos.logback', name: 'logback-classic', version: '1.3.0-alpha5'	//added dependency
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
