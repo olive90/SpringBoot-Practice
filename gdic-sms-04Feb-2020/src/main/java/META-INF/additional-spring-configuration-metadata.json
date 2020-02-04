@@ -1,0 +1,67 @@
+{"properties": [
+  {
+    "name": "lombok.anyConstructor.addConstructorProperties",
+    "type": "java.lang.String",
+    "description": "A description for 'lombok.anyConstructor.addConstructorProperties'"
+  },
+  {
+    "name": "lombok.anyConstructor.addConstructorProperties",
+    "type": "java.lang.String",
+    "description": "A description for 'lombok.anyConstructor.addConstructorProperties'"
+  },
+  {
+    "name": "lombok.anyConstructor.addConstructorProperties",
+    "type": "java.lang.String",
+    "description": "A description for 'lombok.anyConstructor.addConstructorProperties'"
+  },
+  {
+    "name": "lombok.anyConstructor.addConstructorProperties",
+    "type": "java.lang.String",
+    "description": "A description for 'lombok.anyConstructor.addConstructorProperties'"
+  },
+  {
+    "name": "lombok.anyConstructor.addConstructorProperties",
+    "type": "java.lang.String",
+    "description": "A description for 'lombok.anyConstructor.addConstructorProperties'"
+  },
+  {
+    "name": "lombok.anyConstructor.addConstructorProperties",
+    "type": "java.lang.String",
+    "description": "A description for 'lombok.anyConstructor.addConstructorProperties'"
+  },
+  {
+    "name": "lombok.anyConstructor.addConstructorProperties",
+    "type": "java.lang.String",
+    "description": "A description for 'lombok.anyConstructor.addConstructorProperties'"
+  },
+  {
+    "name": "lombok.anyConstructor.addConstructorProperties",
+    "type": "java.lang.String",
+    "description": "A description for 'lombok.anyConstructor.addConstructorProperties'"
+  },
+  {
+    "name": "user.properties",
+    "type": "java.lang.String",
+    "description": "A description for 'user.properties'"
+  },
+  {
+    "name": "csmsid",
+    "type": "java.lang.String",
+    "description": "A description for 'csmsid'"
+  },
+  {
+    "name": "sid",
+    "type": "java.lang.String",
+    "description": "A description for 'sid'"
+  },
+  {
+    "name": "password",
+    "type": "java.lang.String",
+    "description": "A description for 'password'"
+  },
+  {
+    "name": "user",
+    "type": "java.lang.String",
+    "description": "A description for 'user'"
+  }
+]}
